@@ -540,6 +540,10 @@ endif
 " on appearance, not semantics. In later versions I might define more new colours.
 "
 " HELP NEEDED to make this work properly.
+
+"TODO TagHighlight is loaded, just not before this runs it seems... workaround
+"for now
+let _zenburn_TagHighlight = 1
 if exists("_zenburn_TagHighlight") && _zenburn_TagHighlight
 
         " Highlighter seems to think a lot of things are global variables even
@@ -549,7 +553,8 @@ if exists("_zenburn_TagHighlight") && _zenburn_TagHighlight
         " If this is some very bright colour group then things look bad.
         hi link GlobalVariable    Identifier
 
-        hi Class             guifg=#acd0b3
+        "hi Class             guifg=#acd0b3
+        hi Class         ctermfg=115
         if &t_Co > 255
             hi Class         ctermfg=115
         endif
