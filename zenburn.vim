@@ -547,17 +547,17 @@ if exists("_zenburn_TagHighlight") && _zenburn_TagHighlight
         " coloured as a global variable. They should not be global, since
         " they're not visible outside the method.
         " If this is some very bright colour group then things look bad.
-        hi link CTagsGlobalVariable    Identifier
+        hi link GlobalVariable    Identifier
 
-        hi CTagsClass             guifg=#acd0b3
+        hi Class             guifg=#acd0b3
         if &t_Co > 255
-            hi CTagsClass         ctermfg=115
+            hi Class         ctermfg=115
         endif
 
-        hi link CTagsImport       Statement
-        hi link CTagsMember       Function
+        hi link Import       Statement
+        hi link Member       Function
 
-        hi link CTagsGlobalConstant    Constant
+        hi link GlobalConstant    Constant
 
         " These do not yet have support, I can't get them to appear
         hi link EnumerationValue  Float
