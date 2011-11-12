@@ -172,9 +172,9 @@ if ! exists("g:zenburn_old_Visual")
     let g:zenburn_old_Visual = 0
 endif
 
-if ! exists("g:zenburn_disable_ctags_highlighting_support")
+if ! exists("g:zenburn_disable_TagHighlight")
     " enabled by default
-    let g:zenburn_disable_ctags_highlighting_support = 0
+    let g:zenburn_disable_TagHighlight = 0
 endif
 
 " -----------------------------------------------
@@ -187,9 +187,9 @@ endif
 let g:colors_name="zenburn"
 
 " check for ctags-highlighting
-if exists("g:loaded_ctags_highlighting") && g:loaded_ctags_highlighting && ! g:zenburn_disable_ctags_highlighting_support
+if exists("g:loaded_TagHighlight") && g:loaded_TagHighlight && ! g:zenburn_disable_TagHighlight
     " internal
-    let _zenburn_ctags = 1
+    let _zenburn_TagHighlight = 1
 endif
 
 hi Boolean         guifg=#dca3a3
@@ -540,7 +540,7 @@ endif
 " on appearance, not semantics. In later versions I might define more new colours.
 "
 " HELP NEEDED to make this work properly.
-if exists("_zenburn_ctags") && _zenburn_ctags
+if exists("_zenburn_TagHighlight") && _zenburn_TagHighlight
 
         " Highlighter seems to think a lot of things are global variables even
         " though they're not. Example: python method-local variable is
